@@ -26,4 +26,20 @@ addTask("Finish Lab 3");
 
 displayTasks();
 
+function deleteTask(task) {
+    const index = tasks.indexOf(task);
+
+    if (index === -1) {
+        console.log("Error: Task not found.");
+        return;
+    }
+
+    tasks.splice(index, 1);
+    console.log("Task deleted: " + task);
+}
+
 addTask("");
+console.log("\nDeleting a task:");
+deleteTask("Study Git and GitHub");
+
+displayTasks();
